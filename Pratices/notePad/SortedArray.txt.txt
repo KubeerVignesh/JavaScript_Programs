@@ -1,0 +1,37 @@
+Assending Order :
+---------------------
+const arr=[12,54,65,56,546,87];
+arr.sort(function(a, b){
+  return a-b;
+});
+console.log(arr) //Output : [12, 54, 56, 65, 87, 546]
+------------------------------------------------------------
+
+Descending order :
+ ----------------------
+const arr=[12,54,65,56,546,87];
+arr.sort(function(a, b){
+  return b-a;
+});
+console.log(arr) //Output : [546, 87, 65, 56, 54, 12]
+---------------------------------------------------------
+
+Character Sort():
+---------------------
+const name = ["Viggu","Charan", "kiran"]
+
+name.sort((a,b)=>{
+    return a.toLowerCase().localeCompare(b.toLowerCase())
+})   
+			(or)
+ name.sort((a,b)=>{
+     if(a>b){
+         return 1
+     }
+     if(b>a){
+         return -1
+     }
+     return 0;
+ })
+console.log(name)
+----------------------------------------------------------------------------------

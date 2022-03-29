@@ -1,0 +1,104 @@
+String Methods()
+-----------------------------
+length():
+---------
+	The string length is used to represent the length of the string..
+	let a = "Hello"
+	console.log(a.length());
+
+slice(start, end):
+-----------------
+	It can extract the value from given string and return a new String..
+	It can accept negitive index..
+
+	let message ="hello this is john";
+	let part = message.slice(-1,-5);
+	console.log(part);
+	console.log(message.slice(12));
+
+substring(start, end)
+---------------------
+	It is same like slice but it can't accept negitive index..
+	
+	let message ="hello this is john";
+	let part = message.substring(14,18);
+	console.log(part);
+
+substr(start, length)
+----------------------
+	It is same like substring but the difference is the second parameter specifiy the 
+		length of the string
+
+	let message ="hello this is john";
+	let part=message.substr(14, 4);
+	console.log(part);
+
+replace()
+---------
+	This method is used to replace the old string with new string. By using replace method.
+
+	let message = "hello this is john";
+	let newString = message.replace("john", "Bevada");
+	console.log(newString);
+
+charCodeAt(index_Value):
+----------------------
+	This method take the index value as input and return the ascii value of given index is output.
+	
+	 let message = "hello this is john";
+	 console.log(message.charCodeAt(0));
+
+charAt(index_value)
+-------------------
+	This method take the index value as input and return the character value of given input..
+	
+	let message = "hello this is john";
+	 console.log(message.charAt(0));
+
+indexOf(char):
+----------
+	It will take string as a input and return the index value as output..
+	If we define a string it will only first character value index..
+
+	let text = "Hello world, welcome to the universe.";
+	console.log (text.indexOf("welcome"));
+
+at(index_value)
+------------
+	It will take index as a input and return the character value as output..
+	If we define a string it will only first character value index..
+
+	function myFunction(text){
+		return text.at(5)
+	}
+	let messasge = "Hello this is john here";
+	myFunction(message);
+
+codePointAt():
+--------------
+
+String.fromCharCode() :
+----------------
+	This method will take ascii value as input and converted this ascii value into characters.
+
+	string.fromCharCode(arg1, arg2,...., argN)
+	
+	let a = 65;
+	console.log(string.fromCharCode(a)); //Expected output: 'A'
+	
+	let b = 'a'
+	console.log(string.fromCharCode(b)); //Expected output: ""
+
+protoType() :
+------------
+	The prototype 
+
+repeat(count) :
+------------
+	The repeat() method return a string with a no.of copies of a string.
+	The repeat() method return a new String. But it doesn't change original string.
+
+	let message = "hello";
+	console.log(message.repeat(2)); // Expected Output: hello hello
+`
+	

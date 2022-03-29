@@ -1,0 +1,191 @@
+Array Methods():
+---------------------------
+	const name=["kiran", "charan"]
+		   (or)
+	const name = new Array()
+------------------------------------------------------
+1. push():
+----------
+	The push() method is used to add new list (or) in the array.
+	The push() method add new element in the end of the array..
+
+	const name = ["Kiran", "Charan", "Sai Kiran"];
+	name.push("Tharun" );
+	console.log(name);  //Expected Output: ["Kiran", "Charan", "Sai Kiran", "Tharun"] 
+------------------------------------------------------------------------------------------------------------
+2. unshift():
+-----------
+	This unshift() Methiod same like push method, but the difference it is used to add 
+		elements in the Beginning of the array.
+
+	const progLang = new Array();
+	progLang[0] = "C";
+	progLang[1] = "C++";
+	progLang[2] = "Java"
+	progLang.unshift("TypeScript");
+	console.log(progLang); //Expected Output : ['TypeScript', 'C', 'C++', 'Java']
+------------------------------------------------------------------------------------------------------------
+3. pop():
+   ------
+	The pop() Method is used remove the elements from the array.
+	The pop() method remove the last element in the Array.
+
+	const animalNames = ['Tiger', 'Lion', 'Elephant', 'Dog'];
+	animalNames.pop();
+	console.log(animalNames); //Expected Output : ['Tiger', 'Lion', 'Elephant']
+-----------------------------------------------------------------------------------------------------------
+4. shift():
+   ------
+	The shift() method is used to remove the element from the beginning of the array
+	
+	const lang = ["Kannada", "Telugu", 'Hindi", "English', "Tamil"];
+	lang.shift();
+	console.log(lang); //Expected Output: ["Telugu", "Hindi', "English', "Tamil"]
+--------------------------------------------------------------------------------------------------------------
+5. length :
+    -------  
+	The length method is used to find the length of the array
+	
+	const brothers = ["Anni", "Bevada", "Acid", "Jaya"];
+	console.log(brothers.length); //Expected Output: 4
+--------------------------------------------------------------------------------------------------------------
+6. join():
+   -------
+	join() method join all the elements of the array using a seperator and returns 
+		a string.
+
+	const emotions = ['🙂', '😍', '🙄', '😟'];
+
+	const joined = emotions.join();
+	console.log(joined); // "🙂,😍,🙄,😟"
+---------------------------------------------------------------------------------------------------------------
+7. delete :
+   --------
+	Array elements can be deleted using the JavaScript operator delete.
+	Using delete leaves undefined holes in the array.
+	Use pop() or shift() instead.
+
+	const fruits = ["Banana", "Orange", "Apple", "Mango"];
+	delete fruits[0]; 
+	console.log(fruits[0]); //Expected Output : undefined
+	console.log(friuts); //Expected Output : ['Orange', 'Apple', 'Mango']
+----------------------------------------------------------------------------------------------------------------
+8. slice() :
+---------
+	The slice() Method slice out a piece of array into a new Array
+	slice() Method doesn't change the original array.
+	It can create a new shallow copy of the original array...
+	slice() method can take arguments.....slice(1, 2)
+
+	const salad = ['🍅', '🍄', '🥦', '🥒', '🌽', '🥕', '🥑'];
+	const saladNew=salad.slice(2,5)
+	console.log(saladNew) //Output : ['🥦', '🥒', '🌽']
+
+	const saladCopy = salad.slice();
+	console.log(saladCopy); //Output: ['🍅', '🍄', '🥦', '🥒', '🌽', '🥕', '🥑']
+	salad === saladCopy; //Output: returns false
+----------------------------------------------------------------------------------------------------------------
+9. splice() :
+   --------
+	splice() method is used to remove the elements from the array..
+
+	const salad = ['🍅', '🍄', '🥦', '🥒', '🌽', '🥕', '🥑'];
+	const saladNew=salad.slice(2, 2);
+	console.log(salad); //Output : [ "🍅", "🍄", "🌽", "🥕", "🥑" ]
+
+	splice() method is also used to add new Items in the an Array.
+	splice() method is also used for replacing the old item in the array to new array
+	
+	const salad = ['🍅', '🍄', '🥦', '🥒', '🌽', '🥕', '🥑'];
+	const saladNew=salad.slice(2, 2,"Hello", "World");
+	console.log(salad); //Output : [ "🍅", "🍄", "Hello", "world", "🌽", "🥕", "🥑" ]
+------------------------------------------------------------------------------------------------------------------
+10. concat() :
+     ----------
+	It is to add two arrays in one single array..
+
+--------------------------------------------------------------------------------------------------------------------
+11. every() (and):
+     --------
+	[].every(function( elements){ return Condition});
+
+	Return true, if the elements are matching with the given condition..
+	
+	check a codition for all the elements and want to show all the elements 
+	of the array matching with specified condition..
+	
+	In case all the elements if the callback function return true overall of we get true. 
+--------------------------------------------------------------------------------------------------------------------
+12. some() (or):
+      -------
+	[ ].some(function( elements){return Condition})
+	Return true, if at least one element is matches with the given condition. 
+------------------------------------------------------------------------------------------------------------------------
+13. forEach :
+     ---------
+	[ ].forEach(function(elements){any code});
+	Executes the function one for each elements of the array.. 
+
+
+-------------------------------------------------------------------------------------------------------------------------
+14. filter() :
+     ------
+	[].filter(function(elements){retrun Condition})
+	Return all the elements, that are matching with given condition.
+	It is used for searching products in Amazon (or) Flipkart
+--------------------------------------------------------------------------------------------------------------------------
+15. find() :
+     ------
+	[].find( function(elements){return Condition});
+	
+	Return the first maching elements, among the elements that are matching with the given condition..
+	It same like filterMethod but the difference is find()Method is return true when first matching letter among all that matches with the given condition.
+
+for Example:
+--------------
+100
+175		array.find{
+ 50       	fuction(element){ return element > 100})	===>175
+120
+--------------------------------------------------------------------------------------------------------------------------
+16. findIndex() :
+     ------------- 
+	[ ].findIndex(function(elements){return Condition});
+	Return the index of the first matching element, that are matching with the given condition..
+---------------------------------------------------------------------------------------------
+17. includes():
+      ------------ 
+	[ ].indules(value);
+	Return true, if the given value found at at least once in the array..
+---------------------------------------------------------------------------------------------
+18. map() :
+      -------
+	[ ].map(function (element){return value});
+	=>Execute the function once for each element in the array.
+	=>Create a new array with the returned values..
+	=>It is most commonly used JavaScript array method
+	=>It is similar like forEach() Method, but the difference is
+	         forEach()Method you will not return anything.but, in case of map()Method it contains return some value.
+----------------------------------------------------------------------------------------------
+19. flatMap():
+     -------------
+
+
+----------------------------------------------------------------------------------------------
+20. flat() :
+     -------
+
+----------------------------------------------------------------------------------------------
+21. reverse() :
+      ------------
+
+---------------------------------------------------------------------------------------------- 
+
+
+22. rest parameter(...condition):
+23. reduce():
+24. spread
+25. deStructing
+26. property Binding
+27. set()
+
